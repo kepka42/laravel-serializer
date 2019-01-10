@@ -25,7 +25,7 @@ class SerializerService implements SerializerContract
             $result = [];
 
             foreach ($object as $idx => $element) {
-                $result[$idx] = $this->serialize($object, $params);
+                $result[$idx] = $this->serialize($element, $params);
             }
 
             return $result;

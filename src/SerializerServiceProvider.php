@@ -21,7 +21,7 @@ class SerializerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([__DIR__ . '../config/' => config_path() . '/']);
+        $this->publishes([__DIR__ . '/../config/' => config_path() . '/']);
 
         if ($this->app->runningInConsole()) {
             $this->commands([

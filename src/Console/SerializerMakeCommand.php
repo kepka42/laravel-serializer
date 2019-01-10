@@ -13,7 +13,7 @@ class SerializerMakeCommand extends GeneratorCommand
 {
     protected $name = 'make:serializer';
 
-    protected $description = 'Create a new Serializer model class';
+    protected $description = 'Create a new Serializer class';
 
     protected $type = SerializerContract::class;
 
