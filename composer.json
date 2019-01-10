@@ -1,6 +1,7 @@
 {
   "name": "kepka42/laravel-serializer",
   "description": "Package for serialize data",
+  "version": "0.1.0",
   "type": "library",
   "keywords": [
     "laravel",
