@@ -1,0 +1,31 @@
+<?php
+
+namespace DummyNamespace;
+
+use kepka42\LaravelSerializer\Serializer\AbstractSerializer;
+
+class DummyClass extends AbstractSerializer
+{
+    /**
+     * Realization of serializer
+     *
+     * @param $object
+     * @param array $params
+     * @return array
+     */
+    public function serialize($object, $params = []): array
+    {
+        // TODO: Serialize here
+        return [];
+    }
+
+    /**
+     * @param $object
+     * @return bool
+     */
+    public function isSupports($object): bool
+    {
+        return $object instanceof \stdClass /* TODO: Replace stdClass to your type */
+            ;
+    }
+}

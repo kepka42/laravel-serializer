@@ -4,6 +4,7 @@ namespace kepka42\LaravelSerializer;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use kepka42\LaravelSerializer\Console\SerializerMakeCommand;
 use kepka42\LaravelSerializer\Contracts\SerializerContract;
 use kepka42\LaravelSerializer\Serializer\SerializerInterface;
 
@@ -21,6 +22,12 @@ class SerializerServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([__DIR__ . '../config/' => config_path() . '/']);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                SerializerMakeCommand::class
+            ]);
+        }
     }
 
     /**

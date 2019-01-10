@@ -13,9 +13,9 @@ interface SerializerInterface
     /**
      * @param $object
      * @param array $params
-     * @return mixed
+     * @return array
      */
-    public function serialize($object, $params = []);
+    public function serialize($object, $params = []): array;
 
     /**
      * @param $object
