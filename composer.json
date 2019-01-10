@@ -1,0 +1,38 @@
+{
+  "name": "kepka42/laravel-serializer",
+  "description": "Package for serialize data",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "serialize",
+    "serializer"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vladislav Nevzorov",
+      "email": "kepka4242@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "kepka42\\LaravelSerializer\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "laravel/laravel": ">=5.5"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "kepka42\\LaravelSerializer\\SerializerServiceProvider"
+      ],
+      "aliases": {
+        "Serializer": "kepka42\\LaravelSerializer\\Facades\\Serializer"
+      }
+    }
+  }
+}
